@@ -1,8 +1,17 @@
 ﻿   Qt/MSBuild: 3.5.0.0
   Reading Qt configuration (C:/Qt/Qt6.2.2d/bin/qmake)
    Qt: 6.2.2
-x64\Debug\MainWindow.obj : warning LNK4042: object specified more than once; extras ignored
-x64\Debug\GLWidget.obj : warning LNK4042: object specified more than once; extras ignored
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl MainWindow::MainWindow(class QWidget *)" (??0MainWindow@@QEAA@PEAVQWidget@@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl MainWindow::~MainWindow(void)" (??1MainWindow@@UEAA@XZ) referenced in function main
-D:\project\RenderCore\RenderCore\x64\Debug\RenderCore.exe : fatal error LNK1120: 2 unresolved externals
+  Camera.cpp
+  DrawingControlPanel.cpp
+  GLCanvas.cpp
+  LineRenderer.cpp
+  main.cpp
+  MainWindow.cpp
+  ShaderManager.cpp
+  ShapeProvider.cpp
+  qrc_shaders.cpp
+  moc_ShapeProvider.cpp
+  moc_MainWindow.cpp
+  moc_GLCanvas.cpp
+  moc_DrawingControlPanel.cpp
+  RenderCore.vcxproj -> D:\project\RenderCore\RenderCore\x64\Debug\RenderCore.exe

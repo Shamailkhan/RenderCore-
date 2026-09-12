@@ -10,6 +10,35 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DrawingControlPanel.cpp" />
+    <ClCompile Include="GLCanvas.cpp" />
+    <ClCompile Include="LineRenderer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="ShapeProvider.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="GeoUtils.h" />
+    <ClInclude Include="LineRenderer.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="Shape.h" />
+    <QtMoc Include="ShapeProvider.h" />
+    <QtMoc Include="MainWindow.h" />
+    <QtMoc Include="GLCanvas.h" />
+    <QtMoc Include="DrawingControlPanel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LineRenderer.frag" />
+    <None Include="LineRenderer.geom" />
+    <None Include="LineRenderer.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="shaders.qrc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{69523BCC-4BF0-47BA-BFE2-D380C63DD720}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
@@ -65,18 +94,22 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.4.341.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.4.341.1\Include;D:\glew-2.3.1-win32\glew-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);glew32.lib;
+opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\glew-2.3.1-win32\glew-2.3.1\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.4.341.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.4.341.1\Include;D:\glew-2.3.1-win32\glew-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);glew32.lib;
+opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\glew-2.3.1-win32\glew-2.3.1\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">

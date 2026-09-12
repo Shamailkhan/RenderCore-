@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/shaders">
+        <file alias="LineRenderer.vert">LineRenderer.vert</file>
+        <file alias="LineRenderer.geom">LineRenderer.geom</file>
+        <file alias="LineRenderer.frag">LineRenderer.frag</file>
+    </qresource>
+</RCC>
